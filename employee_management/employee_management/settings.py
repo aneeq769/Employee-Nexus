@@ -39,12 +39,14 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'employees',
+    
 ]
 
 # REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        
     ],
 }
 
@@ -83,11 +85,11 @@ WSGI_APPLICATION = 'employee_management.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Amperor',         # Replace with your database name
-        'USER': 'postgres',         # Replace with your PostgreSQL user
-        'PASSWORD': '1234',        # Replace with your PostgreSQL password
-        'HOST': 'localhost',        # Set to your PostgreSQL host (default is localhost)
-        'PORT': '5433',            # Default PostgreSQL port is 5432
+        'NAME': 'Amperor',         
+        'USER': 'postgres',         
+        'PASSWORD': '1234',        
+        'HOST': 'localhost',        
+        'PORT': '5433',            
     }
 }
 
@@ -120,7 +122,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # adjust as needed
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
