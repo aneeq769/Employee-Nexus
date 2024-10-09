@@ -80,7 +80,7 @@ const Tasks = () => {
   return (
     <Container maxWidth="md" style={styles.container}>
       <Typography variant="h4" align="center" gutterBottom style={styles.title}>
-        Your Tasks
+        Tasks
       </Typography>
 
       <List>

@@ -57,8 +57,9 @@ function AdminDashboard() {
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="h6" noWrap component="div">
-            Admin Management Dashboard
+          <Typography variant="h4" noWrap component="div" sx={{  fontWeight: 'bold', color: '#FAFAD2' }}
+          >
+            Admin Dashboard
           </Typography>
           <img
             src={amperor} 
@@ -75,7 +76,7 @@ function AdminDashboard() {
           [`& .MuiDrawer-paper`]: { 
             width: drawerWidth, 
             boxSizing: 'border-box',
-            backgroundColor: '#f0f0f0', 
+            backgroundColor: '#f0f0f0 ', 
           },
         }}
       >
@@ -92,7 +93,8 @@ function AdminDashboard() {
               <ListItem key={item.text} disablePadding>
                 <ListItemButton onClick={() => setActiveComponent(item.text)}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
+                  {/* <ListItemText primary={item.text} /> */}
+                  <ListItemText primary={<Typography sx={{ fontWeight: 'bold'}}>{item.text}</Typography>} />
                 </ListItemButton>
               </ListItem>
             ))}

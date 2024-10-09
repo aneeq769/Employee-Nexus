@@ -58,7 +58,8 @@ function EmployeeDashboard() {
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h4" noWrap component="div" sx={{  fontWeight: 'bold', color: '#FAFAD2' }}
+          >
             Employee Dashboard
           </Typography>
           <img
@@ -85,7 +86,7 @@ function EmployeeDashboard() {
         <Box sx={{ overflow: 'auto' }}>
           <List>
             {[
-              { text: 'Complaints', icon: <ReportIcon /> },
+              { text: 'Complaints' , icon: <ReportIcon /> },
               { text: 'Attendance', icon: <PeopleAltIcon /> },
               { text: 'Tasks', icon: <TaskIcon /> },
               { text: 'Messages', icon: <MessageIcon /> },
@@ -94,7 +95,9 @@ function EmployeeDashboard() {
               <ListItem key={item.text} disablePadding>
                 <ListItemButton onClick={() => setActiveComponent(item.text)}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
+                  
+                  {/* <ListItemText primary={item.text} /> */}
+                  <ListItemText primary={<Typography sx={{ fontWeight: 'bold' }}>{item.text}</Typography>} />
                 </ListItemButton>
               </ListItem>
             ))}

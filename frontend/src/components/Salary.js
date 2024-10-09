@@ -44,7 +44,7 @@ const Salary = () => {
   return (
     <Container maxWidth="lg" style={styles.container}>
       <Typography variant="h4" align="center" gutterBottom>
-        Your Salary Details
+        Salary Details
       </Typography>
       <TableContainer component={Paper} elevation={3} style={styles.tableContainer}>
         <Table>
